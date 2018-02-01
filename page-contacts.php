@@ -9,29 +9,8 @@
 			
 			<div class="container">
                 <div class="borderRadius">
-                    <!--
-                    <div class="col-md-12">
-                            <?php #if (#function_exists('hyip_breadcrumbs')) hyip_breadcrumbs(); ?>
-                    </div>
-                    -->
 
-                    <script>
-                        jQuery(document).ready(function($) {
 
-                            $('input').focusin(function() {
-                                input = $(this);
-
-                                input.attr('placeholder', '');
-                            });
-
-                            $('input').focusout(function() {
-                                input = $(this);
-
-                            });
-
-                        });
-
-                    </script>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                     <?php the_content(); ?>

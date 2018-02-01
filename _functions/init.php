@@ -53,6 +53,14 @@ if (function_exists('register_sidebar')) {
         'before_widget' => '<div class="searchBox">',
         'after_widget' => '</div>'
     ));
+
+    register_sidebar ( array (
+        'name' => '404 page sidebar',
+        'id' => 'sidebar404',
+        'description' => 'searchme',
+        'before_widget' => '<div class="sidebar404">',
+        'after_widget' => '</div>'
+    ));
 }
 
 // ===================================================

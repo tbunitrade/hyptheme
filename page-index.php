@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Главная
+ * Template Name: Index Главная
  * The main template file
  *
  * This is the most generic template file in a WordPress theme
@@ -56,11 +56,8 @@ get_header(); ?>
 
         </div>
 
-        <div id="scroll-to" class="container.text-center">
-            <a  class="sunset-load-more"  data-page="<?php echo sunset_check_paged(1); ?>" data-url="<?php echo admin_url('admin-ajax.php');?>">
-                <span> <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></span>
-                <span class="textDown">Загружаем еще...</span>
-            </a>
+        <div  align="center" class="">1
+            <?php  echo paginate_links();?>
         </div>
 
 

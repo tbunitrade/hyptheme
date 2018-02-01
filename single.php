@@ -2,12 +2,21 @@
 
 <div id="primary" class="content-area singlePost" itemscope itemtype="http://schema.org/Article">
     <main id="main" class="site-main" role="main">
-        <div class="container ">
+        <div class="container " >
             <div class="row infoPost">
                 <div class="author-name">
 
-                    <p itemprop="datePublished"> Обновление: <?php the_time('Y. d. j ') ;?></p> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/author.png"> <p itemprop="author"><span> Автор :</span>
-                        <?php echo get_the_modified_author(); ?></p>
+                    <p itemprop="datePublished">
+                        Обновление: <?php    echo get_the_modified_author(),
+                       ' ',  the_time('d F Y ') ;?></p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/img/author.png">
+                    <p itemprop="author">
+                        <span> Автор :</span>
+                        <span>
+                            <?php echo the_author_meta('display_name', $post->post_author ); ?>
+
+                        </span>
+                    </p>
                 </div>
             </div>
 
@@ -16,7 +25,7 @@
 
             <div class="row">
                 <div class="single-top img-responsive">
-                    <a href=""> <img src="<?php the_post_thumbnail_url(); ?>"/></a>
+                   <?php echo the_post_thumbnail(); ?>
                 </div>
             </div>
 
@@ -25,16 +34,29 @@
                     <h1 class="title"><?php the_title(); ?></h1>
 
 
+
                     <div class="myContent" itemprop="articleBody">
                         <?php the_content(); ?>
                     </div>
+
+                    <div class="row categoryTag">
+                        <div class="col-md-12 tAg">
+                            <div class="col-md-3"> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/cat.png"> Категории</div><div class="col-md-9" itemprop="articleSection"> <?php echo the_category(); ?></div>
+                        </div>
+                        <div class="col-md-11 tAgs">
+                            <div class="col-md-3"> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/tag.png"> Метки </div><div class="col-md-9"> <?php the_tags( ' ', ', ', '<br />' ); ?></div>
+                        </div>
+
+                    </div>
+
+                    <a href="#start"  class="replyTo">Оставить комментарий</a>
 
                     <div class="bottom-content">
 
                         <div class="row">
                             <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.jpg"><span><?php echo the_date() ;?></span></p>
                             <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.jpg"><span><?php echo the_views();  ?></span></p>
-                            <p class="postCount"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.jpg"><span> <?php comments_number( $zero, $one, $more ); ?></span></p>
+                            <p class="postCount"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.jpg"><span> <?php echo comments_number('0', '1', '%' ); ?></span></p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +86,9 @@
                             ?>
                             <li> <img class="readMoreImg" src="<?php the_post_thumbnail_url('thumbnail'); ?>"/>
                                 <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                            <?php echo the_excerpt(); ?></li>
+                                <p><?php custom_length_excerpt(35); ?></p>
+                                </li>
+
                             <?php
                         }
                         echo '</ul>';
@@ -73,24 +97,26 @@
                 }
                 ?>
             </div>
-            <div class="row categoryTag">
-                <div class="col-md-12 tAg">
-                    <div class="col-md-3"> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/cat.png"> Категории</div><div class="col-md-9" itemprop="articleSection"> <?php echo the_category(); ?></div>
-                </div>
-                <div class="col-md-11 tAgs">
-                    <div class="col-md-3"> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/tag.png"> Метки </div><div class="col-md-9"> <?php the_tags( ' ', ', ', '<br />' ); ?></div>
-                </div>
+
+        </div>
+
+        <div class="container myComments myBorder" style="display: none">
+            <div class="row">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/comments.png">
+
+                <?php if ( comments_open() ):
+                        comments_template( '/comments.php' );
+                    endif;
+                ?>
 
             </div>
         </div>
 
-        <div class="container myComments myBorder">
+        <div class="container  myComments myBorder  newComments " >
             <div class="row">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/comments.png">
-
-                <?php comments_template( '/short-comments.php' ); ?>
-
+                <?php comments_template(); ?>
             </div>
+            <div id="start"></div>
         </div>
     </main>
 </div>

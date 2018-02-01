@@ -67,16 +67,8 @@
         <div class="middleContainer">
             <div class="loginContainer">
 
-<!--                <form action="" class="formSender" method="get" id="logFormSender">-->
-<!--                    <br>-->
-<!--                    <br>-->
-<!--                    <input type="email" placeholder="Enter your name" id="email">-->
-<!--                    <input type="password" placeholder="Enter your password" id="password">-->
-<!--                    <label><input type="checkbox" class="checkboxIn"> Запомнить меня</label>-->
-<!--                    <input type="submit" value="Войти" class="submit" id="submit">-->
-<!--                </form>-->
                 <br>
-                <?php wp_login_form();
+                <?php wp_login_form($args);
 
                 $args = array(
                     'echo' => true,

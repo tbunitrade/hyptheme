@@ -16,13 +16,19 @@
 // ==== Register All Scripts & Styles  ===============
 // ===================================================
 
+wp_localize_script( 'hyiptheme-script', 'ajax_posts', array(
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    'noposts' => __('No older posts found', 'hyiptheme'),
+));
+
+
 
 
 function hyip_register_all_scripts_and_styles() {
 	// ======== CSS
     wp_register_style('font_awesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_register_style( 'vendor', get_template_directory_uri() . '/dist/css/vendor.css', false, '', 'all' );
-	wp_register_style ('style', get_template_directory_uri() .'/dist/css/style.css', true,'', 'all');
+	wp_register_style ('style', get_template_directory_uri() .'/dist/css/style.css', false,'', 'all');
 	wp_register_style( 'admin_css', get_template_directory_uri() . '/admin.css', false, '1.0.0' );
 	// ======== JS
 	wp_register_script('vendor', get_template_directory_uri() . '/dist/js/vendor.js', array('jquery'), true);

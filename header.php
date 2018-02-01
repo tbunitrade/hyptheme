@@ -30,13 +30,15 @@
             echo ' - page '. $paged; }
         ?>
     </title>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="/favicon.ico">
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
 
 
 </head>

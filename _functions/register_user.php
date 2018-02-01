@@ -30,7 +30,7 @@ echo '
             
             <input placeholder="Ваш Email" type="text" name="email" value="' . ( isset( $_POST['email']) ? $email : null ) . '">
         </div>
-        <input class="submit"  type="submit" name="submit" value="Register"/>
+        <input class="submit"  type="submit" name="submit" value="Регистрация"/>
     </form>
     
     

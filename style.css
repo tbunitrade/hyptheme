@@ -2,68 +2,8 @@
 Theme Name: Hyip WordPress Theme
 Author : Platinum Trade
 Description : Blog theme for PlanetHyip
-Version : 1.0
+Version : 1.1
 Text Domain: hyipTheme
 */
 
 @import '/dist/css/style.css' screen;
-
-
-/*Ajax loading options*/
-.container-load-previous {
-    margin-top:30px;
-    margin-bottom: 0px ;
-}
-
-.page-limit {
-    margin-bottom: 50px;
-}
-
-.customClassContainer article {
-    transform: translateY(50px);
-    opacity: 0;
-}
-
-.reveal {
-    transform: translateY(0px);
-    opacity: 1!important;
-}
-
-.styleMe {
-    display: block;
-    width: 260px;
-    color: #222;
-    font-size: 30px;
-    margin: 0 auto;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: 0.17s linear;
-
-}
-.styleMe:hover,
-.styleMe:focus {
-    opacity: 1;
-    transition-delay: 0.1s;
-}
-
-.styleMe span {
-    display: block;
-}
-
-.styleMeText {
-
-}
-
-.loading {
-    opacity: 1;
-    cursor: default;
-}
-
-.spin {
-
-    transform: rotate(360deg);
-    transition: 1.2s linear;
-    animation-duration: 320ms;
-    animation-iteration-count: infinite;
-}
-

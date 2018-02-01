@@ -35,8 +35,8 @@ require_once ('_functions/excerpt.php');
 //Plugin Register
 require_once ('_functions/postview.php');
 
-//comments
-//require_once ('_functions/comments.php');
+//comments count
+require_once ('_functions/comments.php');
 
 // Doctor Login
 //require_once ('_functions/login.php');
@@ -184,30 +184,3 @@ function footer_enqueue_scripts(){
     add_action('wp_footer','wp_print_head_scripts',5);
 }
 add_action('after_setup_theme','footer_enqueue_scripts');
-
-
-function hyip_infinite_scroll_init() {
-    add_theme_support( 'infinite-scroll', array(
-        'container' => 'content',
-    ) );
-}
-add_action( 'after_setup_theme', 'hyip_infinite_scroll_init' );
-
-function hyip_infinite_scroll_render() {
-    get_template_part( 'content' );
-}
-
-/**
- * Sort all Infinite Scroll results alphabetically by post name
- *
- * @param array $args
- * @filter infinite_scroll_query_args
- * @return array
- */
-function jetpack_infinite_scroll_query_args( $args ) {
-    $args['order']   = 'ASC';
-    $args['orderby'] = 'name';
-
-    return $args;
-}
-add_filter( 'infinite_scroll_query_args', 'jetpack_infinite_scroll_query_args' );
