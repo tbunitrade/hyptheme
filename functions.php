@@ -24,7 +24,7 @@ require_once ('_functions/postview.php');
 require_once ('_functions/login_user.php');
 
 //Plugin Register
-require_once ('_functions/register_user.php');
+//require_once ('_functions/register_user.php');
 
 //Plugin Register
 require_once ('_functions/ajax.php');

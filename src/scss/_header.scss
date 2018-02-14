@@ -5,7 +5,6 @@
 -----------------------------------------*/
 header {
   width: 100%;
-  //max-width: 1980px;
   min-width: 340px;
   margin: auto;
   background: $headerbg;
@@ -41,13 +40,10 @@ header {
           left: 2%;
           display: none;
           z-index: 2000;
-          /*background-color: $blue-dark;*/
           transition: transform 0.3s;
-          /*overflow: hidden;*/
           background: transparent;
           background-color: transparent;
           border:none;
-          /*transition: .17s linear;*/
 
           span {
             color: #dbdbe1;
@@ -61,9 +57,6 @@ header {
             line-height: 14px;
             font-weight: 700;
             font-family: 'Roboto';
-
-
-
           }
 
           &:before {
@@ -80,21 +73,16 @@ header {
           }
 
           &:after {
-            /*width: 150px;
-            height: 100vh;
-            content: '';
-            background: #DCE1EA;
-            display: none;
-            position: absolute;*/
+
           }
 
           &:hover {
             background: #DCE1EA;
-            /*transition-delay: 0.2s;*/
 
             &:before {
               background: url(../../dist/img/vkArrowBlack.png);
             }
+
             span {
               color:#000;
             }
@@ -261,7 +249,6 @@ header {
         padding: 0;
         margin-top: 5px;
 
-
         @media (min-width: $screen-md-min) {
           margin-top: 39px;
         }
@@ -303,8 +290,6 @@ header {
       }
     }
 
-
-
     #bs-example-navbar-collapse-1 {
        background: $white ;
        z-index: 9999;
@@ -326,7 +311,6 @@ header {
   outline: 0px solid blue;
   margin: auto;
   margin-top: 101px;
-
 
     .container {
 

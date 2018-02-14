@@ -111,7 +111,7 @@ gulp.task('browser-sync', function (){
     ] ;
 
     browserSync.init (files, {
-        proxy: "localhost/hyip/wordpress/",
+        proxy: "planworld.local",
         notify: false
     });
 });

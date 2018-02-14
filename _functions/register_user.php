@@ -1,40 +1,30 @@
 <?php
 /*
   Plugin Name: Custom Registration
-  Plugin URI: grapps.io
+  Plugin URI: http://sierra-group.in.ua
   Description: Registration user
   Version: 1.0
   Author: P
   Author URI: http://sierra-group.in.ua
  */
-$backurl="http://pm.xpert.lv/lv/cienijamie-klinikas-viesi/";
-
 
 function registration_form( $username, $password, $email ) {
 echo '
-
-
-
     <form action="' . $_SERVER['REQUEST_URI'] . '" method="post" class="formSender">
         <div>
         <br>
-        <br>
-            
+        <br>            
             <input placeholder="Ваше имя" type="text" name="username" value="' . ( isset( $_POST['username'] ) ? $username : null ) . '">
         </div>
         <div>
             
             <input  placeholder="Ваш Пароль " type="password" name="password" value="' . ( isset( $_POST['password'] ) ? $password : null ) . '">
         </div>
-        <div>
-            
+        <div>            
             <input placeholder="Ваш Email" type="text" name="email" value="' . ( isset( $_POST['email']) ? $email : null ) . '">
         </div>
         <input class="submit"  type="submit" name="submit" value="Регистрация"/>
-    </form>
-    
-    
-    
+    </form>    
     ';
 }
 ?>
@@ -85,24 +75,20 @@ function registration_validation( $username, $password, $email ){
 
             );
             $user = wp_insert_user($userdata);
-
             echo '<script type="text/javascript">
-
-
-
- $(document).ready( function() {
-        
-            $(".layoutAuthArea").show();
-            $(".loginContainer").css("display","block");
-            $(".regContainer").css("display","none");
-            $(".loginBtn").css("background","#6bbe92");
-            $(".loginBtn").css("color","#fff");
-            $(".regBtn").css("background","#29363d");
-            $(".regBtn").css("color","#a4a8ab");       
-
-        });
-
-</script>';
+             $(document).ready( function() {
+                    
+                        $(".layoutAuthArea").show();
+                        $(".loginContainer").css("display","block");
+                        $(".regContainer").css("display","none");
+                        $(".loginBtn").css("background","#6bbe92");
+                        $(".loginBtn").css("color","#fff");
+                        $(".regBtn").css("background","#29363d");
+                        $(".regBtn").css("color","#a4a8ab");       
+            
+                    });
+            
+            </script>';
 
 
         }
