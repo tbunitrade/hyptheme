@@ -9,34 +9,38 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'hyiptheme-panel ' ); ?> >
-    <div class="panel-image" >
+<article id="11 post-<?php the_ID(); ?>" <?php post_class( 'hyiptheme-panel ' ); ?> >
+    <div class="panel-image neW" >
+        <div class="newBgRed">
+            <?php the_category(' > ', 'single'); ?>
+        </div>
+
+        <div class="authoR">
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/img/mobile/authoricon.png">
+                    <p itemprop="author">
+                        <span> Автор :</span>
+                        <span>
+                            <?php echo the_author_meta('display_name', $post->post_author ); ?>
+
+                        </span>
+                    </p>
+        </div>
+
+        <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         <div class="panel-image-prop">
             <?php echo the_post_thumbnail(); ?>
+
         </div>
         <a href="<?php the_permalink(); ?>" class="hrefTypeOne">Открыть запись</a>
-        <a href="<?php the_permalink(); ?>" class="hrefTypeTwo"></a>
+        <a href="<?php the_permalink(); ?>" class="hrefTypeTwo"><span>Читать далее</span></a>
+
+        <div class="bottom-content">
+            <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.png"><span><?php echo get_the_date() ;?></span></p>
+            <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.png"><span><?php echo the_views(); ?></span></p>
+            <p class="postViewData"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.png"><span><?php comments_number('0', '1', '%'); ?> </span></p>
+
+        </div>
         <div class="panel-image-prop" ></div>
     </div><!-- .panel-image -->
-    <div class="panel-content">
-        <div class="wrap">
-            <header class="entry-header">
-                <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-            </header><!-- .entry-header -->
-
-            <div class="entry-content">
-               <p> <?php custom_length_excerpt(55); ?></p>
-            </div><!-- .entry-content -->
-
-            <div class="bottom-content">
-
-                <div class="row">
-                    <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.jpg"><span><?php echo get_the_date() ;?></span></p>
-                    <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.jpg"><span><?php echo the_views(); ?></span></p>
-                    <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.jpg"><span><?php comments_number('0', '1', '%'); ?> </span></p>
-
-                </div>
-            </div>
-        </div><!-- .wrap -->
-    </div><!-- .panel-content -->
 </article><!-- #post-## -->

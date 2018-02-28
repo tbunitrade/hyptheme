@@ -19,9 +19,14 @@
 
 get_header(); ?>
 
+
+
+
 <div id="primary" class="content-area">
-    <div class="sideBar"> </div>
-    <main id="main" class="site-main" role="main">
+    <div class="topSideBar">
+
+    </div>
+    <main id="main indexphp" class="site-main" role="main">
 
         <div class="container sunset-posts-container">
 

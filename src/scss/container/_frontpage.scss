@@ -9,35 +9,33 @@
   width: 100px;
   height: 100vh;
 }
-
 .site-main {
   max-width: 750px;
   margin: auto;
-
 }
 */
 .home {
   article {
-    box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+    /*box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
     border-radius: 12px ;
     width: 100%;
     max-width: 768px;
     margin: auto;
-    margin-bottom: 55px;
+    margin-bottom: 55px;*/
 
     .panel-image {
       background: black;
-      border-radius: 12px 12px 0px 0px;
-      height: 249px;
+      border-radius: 12px 12px 12px 12px;
+      height: 460px;
 
       .panel-image-prop {
 
-        border-radius: 12px 12px 0 0;
+        border-radius: 12px 12px 12px 12px;
 
         img {    width: 100%;
           max-width: 768px;
 
-          border-radius: 12px 12px 0px 0px;
+          border-radius: 12px 12px 12px 12px;
         }
       }
     }
@@ -81,6 +79,17 @@
       right: 15px;
       bottom: 20px;
       z-index: 999;
+
+      span {
+        display: inline-block;
+        position: inherit;
+        right: 50px;
+        width: 111px;
+        top: 6px;
+        font-size: 18px;
+        font-weight: 900;
+        color: $white;
+      }
     }
 
     &:hover {
@@ -128,16 +137,16 @@
       }
     }
 
-      .entry-content {
+    .entry-content {
 
-          p {
-            padding: 20px 30px 38px ;
-            font-size: 15px;
-            font-weight: 300;
-            font-family: 'Roboto';
-            line-height: 26px;
-          }
+      p {
+        padding: 20px 30px 38px ;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: 'Roboto';
+        line-height: 26px;
       }
+    }
 
     .bottom-content {
       border-top:1px solid $panelhr;

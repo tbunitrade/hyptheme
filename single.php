@@ -54,9 +54,9 @@
                     <div class="bottom-content">
 
                         <div class="row">
-                            <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.jpg"><span><?php echo the_date() ;?></span></p>
-                            <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.jpg"><span><?php echo the_views();  ?></span></p>
-                            <p class="postCount"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.jpg"><span> <?php echo comments_number('0', '1', '%' ); ?></span></p>
+                            <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.png"><span><?php echo the_date() ;?></span></p>
+                            <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.png"><span><?php echo the_views();  ?></span></p>
+                            <p class="postCount"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.png"><span> <?php echo comments_number('0', '1', '%' ); ?></span></p>
                         </div>
                     </div>
                 </div>

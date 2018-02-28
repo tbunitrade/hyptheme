@@ -10,9 +10,9 @@
 
 
 
-        <div id="primary" class="content-area">
-            <div class="sideBar"> </div>
-            <main id="main" class="site-main" role="main">
+        <div id="primary  " class="content-area">
+
+            <main id="main pageajax" class="site-main" role="main">
 
                 <div class="container sunset-posts-container">
 

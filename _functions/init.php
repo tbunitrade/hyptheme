@@ -61,6 +61,14 @@ if (function_exists('register_sidebar')) {
         'before_widget' => '<div class="sidebar404">',
         'after_widget' => '</div>'
     ));
+
+    register_sidebar ( array (
+        'name' => 'New Tag',
+        'id' => 'newtag',
+        'description' => 'searchme',
+        'before_widget' => '<div class="newtagCont">',
+        'after_widget' => '</div>'
+    ));
 }
 
 // ===================================================

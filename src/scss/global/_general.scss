@@ -4,7 +4,7 @@
    Typography
 -----------------------------------------*/
 body {
-  font-family: 'Roboto';
+  font-family: 'MetaPro';
   background: $white;
 }
 
@@ -13,113 +13,43 @@ body {
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Thin.ttf') format ('ttf');
-  font-weight: 100;
-  font-style: normal;
-}
-
-
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Light.ttf') format ('ttf');
+  font-family: 'MetaPro';
+  src: url('../fonts/metapro/metapro-book.otf') format ('otf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-LightItalic.ttf') format ('ttf');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Regular.ttf') format ('ttf');
+  font-family: 'MetaPro';
+  src: url('../fonts/metapro/metapro-normal.otf') format ('otf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Medium.ttf') format ('ttf');
+  font-family: 'MetaPro';
+  src: url('../fonts/metapro/metapro-medium.otf') format ('otf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Bold.ttf') format ('ttf');
+  font-family: 'MetaPro';
+  src: url('../fonts/metapro/metapro-bold.otf') format ('otf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto/Roboto-Bold.ttf') format ('ttf');
-  font-weight: 700;
-  font-style: italic;
-}
-/*
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-LightItalic.ttf') format ('ttf');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Italic.ttf') format ('ttf');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.ttf') format ('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-SemiBold.ttf') format ('ttf');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-SemiBoldItalic.ttf') format ('ttf');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Bold.ttf') format ('ttf');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-BoldItalic.ttf') format ('ttf');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.ttf') format ('ttf');
+  font-family: 'MetaPro';
+  src: url('../fonts/metapro/metapro-black.otf') format ('otf');
   font-weight: 900;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-ExtraBoldItalic.ttf') format ('ttf');
-  font-weight: 900;
-  font-style: italic;
-}
-*/
+
+
+
+
 /* HEADINGS */
 
 h1,
@@ -136,17 +66,30 @@ p{
 /*Wrapper*/
 .container {
   min-width: 320px;
-}
-
-.content-area {
-  margin: 10px;
+  padding: 0;
 
   @media (min-width: $screen-md-min){
-    margin: auto;
+
   }
 }
 
+.content-area {
+  //margin: 22px 10px 0px 10px;
+  //margin-top: 50px;
 
+  @media (min-width: $screen-md-min){
+    margin: auto;
+    //margin-top: 100px;
+  }
+}
+
+.navbar {
+  margin-bottom: 0!important;
+}
+
+*{
+  outline: 0px solid red;
+}
 
 .navbar-inverse {
   background-color: #191919;
@@ -179,4 +122,8 @@ p{
 
 .hrefTypeOne {
   background: $postcolor!important;
+}
+
+.clear {
+  clear: both;
 }
