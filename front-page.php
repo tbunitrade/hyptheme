@@ -46,7 +46,44 @@ get_header(); ?>
         </div>
 
         <div class="newTag">
-            <?php echo dynamic_sidebar ('newtag'); ?>
+            <?php dynamic_sidebar ('newtag'); ?>
+        </div>
+
+        <div class="mini">
+
+            <div class="container sunset-posts-container">
+
+                <?php // Show the selected frontpage content.
+
+                $postsPerPage = 2;
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => $postsPerPage
+                );
+
+                $loop = new WP_Query($args);
+
+                if ( $loop->have_posts() ) :
+
+                    echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                    while ( $loop->have_posts() ) : $loop->the_post();
+
+                        $class = 'reveal';
+                        set_query_var('post-class' , $class );
+                        get_template_part( 'template-parts/page/content', 'front-page' );
+
+                    endwhile;
+                    echo '</div>';
+
+                endif; ?>
+
+                <!-- append here -->
+
+
+
+
+            </div>
+
         </div>
     </aside>
 </div><!-- #primary -->

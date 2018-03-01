@@ -59,6 +59,10 @@
       bottom: 20px;
       z-index: 999;
 
+      @media (min-width: $screen-lg-min) {
+        bottom: -44px;
+      }
+
       span {
         display: inline-block;
         position: inherit;

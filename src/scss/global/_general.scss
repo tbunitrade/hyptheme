@@ -88,7 +88,7 @@ p{
 }
 
 *{
-  outline: 1px solid red!important;
+  outline: 0px solid red!important;
 }
 
 .clear {
@@ -97,6 +97,10 @@ p{
 
 .navbar-inverse {
   background-color: #191919;
+}
+
+li {
+  list-style-type: none;
 }
 
 

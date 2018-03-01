@@ -253,12 +253,17 @@
 
     @media (min-width: $screen-md-min){
       width: 98%;
+      left: 11px;
     }
   }
 
   .bottom-content {
     position: absolute;
     bottom: 15px;
+
+    @media (min-width: $screen-lg-min) {
+      bottom: -44px;
+    }
 
     .postCalendar,
     .postView,
@@ -316,6 +321,7 @@
   color:$white;
   font-size: 18px;
   text-transform: capitalize;
+  height: 55px;
 
   img {
     display: inline-block;
@@ -339,5 +345,84 @@
     @media (min-width: $screen-md-min) {
       top:14px;
     }
+  }
+}
+
+.mini {
+
+  #meme {
+    max-width: 370px;
+    height: 234px;
+
+    .neW {
+     height: 187px;
+    }
+
+    .entry-title {
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 32px;
+      top:80px;
+    }
+
+    .bottom-content {
+
+      img {
+        width: 20px;
+        top:0px;
+        position: relative;
+      }
+
+      span {
+        font-size: 13px;
+        top:-3px;
+      }
+    }
+
+    .hrefTypeTwo{
+      width: 18px;
+      height: 18px;
+      background-size: contain;bottom: -39px;
+    span {
+      font-size: 13px;
+      top:0px;
+    }}
+
+    .postView {
+      display: none;
+    }
+
+    .postViewData {
+      left: 50px;
+      position: relative;
+      top: 3px;
+    }
+
+    .newBgRed {
+      height: 38px;
+      line-height: 38px;
+      left: 1px;
+
+      a{
+        font-size: 16px;
+      }
+    }
+
+    .authoR {
+      height: 37px;
+    }
+
+    .authoR p {
+      top: 9px;
+      font-size: 13px;
+    }
+
+    .authoR img {
+      top: 13px;
+      right: 30px;
+      width: 18px;
+    }
+
+
   }
 }
