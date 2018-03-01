@@ -12,14 +12,11 @@ height: 55px;
 
   @media (min-width: 768px){
 
-
   }
 
   @media (min-width: $screen-md-min){
     height: 101px;
   }
-
-
 
   .headerContainer {
     display: block;
@@ -27,7 +24,6 @@ height: 55px;
     @media (min-width: $screen-lg-min) {
       width: 1270px;
       margin: auto;
-
     }
 
     .navbar-header {

@@ -5,13 +5,10 @@
 .searchLine {
   width:100%;
   max-width: 1150px;
-
   margin: auto;
   margin-top: 15px;
-
   background: #fff;
   display: none;
-
 
   @media (min-width: $screen-md-min) {
     height: 82px;
@@ -28,7 +25,6 @@
     font-family: 'MetaPro';
     color: $black;
     height: 82px;
-
     border-radius: 9px;
     border: 1px solid #ddddde;
     padding-left: 20px;
@@ -52,8 +48,6 @@
 
 }
 
-
-
 .newContainer {
   width: 100%;
   max-width: 1150px;
@@ -66,18 +60,32 @@
   }
 
   .newMain {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    float: left;
 
     article {
       margin: 0px 5px 29px 0px;
     }
 
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    max-width: 728px;
-    float: left;
+    @media (min-width:$screen-md-min) {
+      max-width: 628px;
+
+      article {
+        .panel-image {
+          height: 398px;
+        }
+
+      }
+    }
+
+    @media (min-width:$screen-lg-min) {
+      max-width: 728px;
+    }
 
     .panel-content {
+
       .wrap {
         display: none;
       }
@@ -90,11 +98,8 @@
       background: $white;
       border-radius: 8px;
       border: 1px solid #efeff3;
-
       line-height: 66px;
-
       font-size:20px;
-
       color: $black;
       text-align: left;
 
@@ -103,9 +108,8 @@
       a:focus, a:hover {
         color: $black;
         margin: 0px 30px;
-        font-family: "MetaPro";
+        font-family: 'MetaPro';
         font-weight: bold;
-
       }
     }
   }
@@ -114,26 +118,40 @@
     display: inline-block;
     vertical-align: top;
     width: 100%;
-    max-width: 374px;
+    max-width: 340px;
     float: right;
+
+    @media (min-width: $screen-lg-min) {
+      max-width: 374px;
+    }
 
     .telegram {
       display: inline-block;
       vertical-align: top;
       background-image: url("../img/mobile/telegram.png");
       background-repeat: no-repeat;
-      width: 377px;
+      width: 340px;
       height: 206px;
       background-size: contain;
       position: relative;
 
+      @media (min-width: $screen-lg-min) {
+        width: 377px;
+      }
+
       p {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 900;
         color: $white;
         text-transform: uppercase;
         padding: 29px 0px 0px 16px;
         line-height: 37px;
+
+        @media (min-width: $screen-lg-min) {
+          font-size: 28px;
+          padding: 29px 0px 0px 16px;
+          line-height: 37px;
+        }
       }
 
       &:after {
@@ -147,20 +165,17 @@
         bottom: 26px;
         right: 0;
       }
-
-
     }
 
     .newtagCont {
       border: 1px solid #efeff3;
       border-radius: 8px;
       padding: 10px;
+      margin: 20px 0px;
 
       .widgettitle {
         display: none;
       }
-
-      margin: 20px 0px;
     }
 
     .cat-item {
@@ -179,10 +194,7 @@
         font-weight: 500;
       }
     }
-
   }
-
-
 }
 
 
@@ -190,13 +202,10 @@
 .content-areaNew{
   display: block;
 
-
   @media (min-width:$screen-md-min) {
-
     display: none;
   }
 }
-
 
 .neW {
 
@@ -209,17 +218,26 @@
     font-weight: 900;
     font-size: 25px;
     text-align: center;
+
     line-height: 57px;
-    padding: 0px 10px;
-    border-radius: 12px 0px 12px 0px  ;
+    padding: 0 10px;
+    border-radius: 6px 0 12px 0;
+    position: relative;
+    left: 2px;
 
+    @media (min-width: $screen-lg-min) {
+      left: 0px;
+    }
 
-      a {
-        color: $white!important;
-        text-decoration: none;
-        font-weight: 900;
-      }
+    //line-height: 57px;
+    //padding: 0px 10px;
+    //border-radius: 12px 0px 12px 0px;
 
+    a {
+      color: $white!important;
+      text-decoration: none;
+      font-weight: 900;
+    }
   }
 
   .entry-title {
@@ -232,6 +250,10 @@
     width: 88%;
     left: 17px;
     text-transform: uppercase;
+
+    @media (min-width: $screen-md-min){
+      width: 98%;
+    }
   }
 
   .bottom-content {
@@ -253,8 +275,6 @@
         position: relative;
         color: $white;
         font-size: 18px;
-
-
         font-weight: 900;
         left: 11px;
         top: -7px;
@@ -286,7 +306,6 @@
         top: -7px;
       }
     }
-
   }
 }
 
@@ -294,12 +313,8 @@
   position: absolute;
   right: 0px;
   top:0px;
-
   color:$white;
-
   font-size: 18px;
-
-
   text-transform: capitalize;
 
   img {
@@ -307,15 +322,22 @@
     position: relative;
     right: 27px;
     top:30px;
+
+    @media (min-width: $screen-md-min) {
+      top:20px;
+      right: 30px;
+    }
   }
 
   p {
     display: inline-block;
-
     position: relative;
     right: 27px;
     top:24px;
     font-weight: 900;
-  }
 
+    @media (min-width: $screen-md-min) {
+      top:14px;
+    }
+  }
 }

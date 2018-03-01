@@ -88,7 +88,11 @@ p{
 }
 
 *{
-  outline: 0px solid red;
+  outline: 1px solid red!important;
+}
+
+.clear {
+  clear: both;
 }
 
 .navbar-inverse {
@@ -124,6 +128,4 @@ p{
   background: $postcolor!important;
 }
 
-.clear {
-  clear: both;
-}
+

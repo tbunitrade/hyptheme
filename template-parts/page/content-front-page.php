@@ -9,7 +9,7 @@
  */
 
 ?>
-<article id="11 post-<?php the_ID(); ?>" <?php post_class( 'hyiptheme-panel ' ); ?> >
+<article id="meme" class="panel-image-prop" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
     <div class="panel-image neW" >
         <div class="newBgRed">
             <?php the_category(' > ', 'single'); ?>
@@ -28,10 +28,7 @@
         </div>
 
         <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-        <div class="panel-image-prop">
-            <?php echo the_post_thumbnail(); ?>
 
-        </div>
         <a href="<?php the_permalink(); ?>" class="hrefTypeOne">Открыть запись</a>
         <a href="<?php the_permalink(); ?>" class="hrefTypeTwo"><span>Читать далее</span></a>
 
