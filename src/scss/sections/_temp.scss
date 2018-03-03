@@ -1,16 +1,23 @@
-//.full-screen {
-//  width: 100%;
-//  height: 100px;
-//}
-//
-//.navbar-toggle .icon-bar{
-//  width: 26px;
-//  height: 5px;
-//  border-radius: 3px;
-//}
-//
-//.navbar-inverse .navbar-toggle,
-//.navbar-inverse .navbar-toggle:hover {
-//  background-color: transparent!important;
-//  border: none!important;
-//}
+
+.current-menu-item{
+
+  .active{
+
+    a{
+      color:#ea1f1f!important;
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color:#ea1f1f!important;
+  background-color: transparent!important;
+
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}

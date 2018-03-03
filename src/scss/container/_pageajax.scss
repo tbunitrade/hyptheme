@@ -83,7 +83,7 @@
   height: 189px;
   background-repeat: no-repeat;
   background-position:(center,center) ;
-  background-size:contain;
+  background-size:cover;
   position: relative;
   min-width: 320px;
   margin: auto;
@@ -345,6 +345,18 @@
         line-height: 29.17px;
       }
     }
+  }
+}
+
+#morememe {
+  display: none;
+  position: absolute;
+  left: -50000px;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+    position: relative;
+    left: unset;
   }
 }
 

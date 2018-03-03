@@ -1,0 +1,21 @@
+.panel-image {
+
+  &:hover {
+
+    .panel-image-prop {
+
+      img {
+        opacity: 0.5;
+        background: $black;
+      }
+    }
+
+    .hrefTypeOne {
+      display: block;
+    }
+
+    .hrefTypeTwo {
+      display: block;
+    }
+  }
+}

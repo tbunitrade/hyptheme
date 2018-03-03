@@ -55,7 +55,7 @@ get_header(); ?>
 
                 <?php // Show the selected frontpage content.
 
-                $postsPerPage = 2;
+                $postsPerPage = 3;
                 $args = array(
                     'post_type' => 'post',
                     'posts_per_page' => $postsPerPage
