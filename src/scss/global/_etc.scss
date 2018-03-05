@@ -19,3 +19,50 @@
     }
   }
 }
+
+.collapse {
+  @media (min-width: $screen-lg-min) {
+    display: none!important;
+  }
+
+
+}
+
+#bs-example-navbar-collapse-1 {
+  background-color:#191919!important;
+  position: relative;
+  top:23px;
+
+  @media (min-width: $screen-sm-min) {
+    position: unset;
+    top:0px;
+  }
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  top:0px;
+
+  @media (min-width: $screen-sm-min) {
+    position: unset;
+    width: unset;
+    float: none;
+  }
+  
+  @media (min-width: $screen-md-min) {
+    float: none;
+    
+  }
+}
+
+.in {
+  width: 100%;
+  background: #191919;
+
+  .nav,
+  .navbar-nav {
+    background: #191919!important;
+  }
+
+}

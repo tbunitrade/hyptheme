@@ -23,6 +23,8 @@ height: 55px;
 
   .headerContainer {
     display: block;
+    position: relative;
+
 
     @media (min-width: $screen-lg-min) {
       width: 1270px;
@@ -103,6 +105,7 @@ height: 55px;
   .logoContainer {
     position: relative;
     display: inline-block;
+    z-index: 999;
 
     @media (min-width: $screen-md-min) {
       display: block;

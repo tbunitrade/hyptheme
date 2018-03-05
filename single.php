@@ -2,6 +2,18 @@
 
 <div id="primary" class="content-area singlePost" itemscope itemtype="http://schema.org/Article">
     <main id="main" class="site-main" role="main">
+        <div class="topSideBar">
+
+
+            <?php
+            if ( ! empty ( $_SERVER['HTTP_REFERER'] ) )
+            {
+            ?>
+            <a href="<?php echo esc_url( $_SERVER['HTTP_REFERER'] ) ?>">  <img src="<?php echo get_template_directory_uri (); ?>/dist/img/mobile/back.png"><span>Назад</span></a>
+            <?php
+}
+?>
+        </div>
         <div class="container "  style="display: none">
             <div class="row infoPost">
                 <div class="author-name">
@@ -22,6 +34,8 @@
 
         </div>
         <div class="container myBorder">
+
+
 
             <div class="row" style="display: none">
                 <div class="single-top img-responsive">
@@ -52,6 +66,7 @@
 
 
 
+
                     <div class="bottom-content">
                         <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.png"><span><?php echo get_the_date() ;?></span></p>
                         <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.png"><span><?php echo the_views(); ?></span></p>
@@ -68,6 +83,16 @@
                 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
                     <h1 class="title"><?php the_title(); ?></h1>
 
+
+                            <p  class="forMobileAuthor">
+                                Автор: <?php    echo get_the_modified_author(),
+                                ' * ',  the_time('F d,  Y ') ;?></p>
+
+
+
+                            </p>
+
+                    </div>
 
 
                     <div class="myContent" itemprop="articleBody">

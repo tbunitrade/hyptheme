@@ -90,9 +90,7 @@ get_header(); ?>
 <div class="clear"></div>
 
 <div id="primary222  " class="content-area content-areaNew">
-    <div class="topSideBar">
-        <img src="<?php echo get_template_directory_uri (); ?>/dist/img/mobile/back.png"><span>Назад</span>
-    </div>
+
     <main id="main pageajax" class="site-main" role="main">
 
         <div class="container sunset-posts-container">
