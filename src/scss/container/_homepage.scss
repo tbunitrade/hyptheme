@@ -6,17 +6,65 @@
   width:100%;
   max-width: 1140px;
   margin: auto;
-  margin-top: 30px;
+  padding-top: 17px;
   background: #fff;
   display: none;
+
+
 
   @media (min-width: $screen-md-min) {
     height: 122px;
     display: block;
+
+
   }
 
-  input {
+  @media (min-width: $screen-lg-min)
+  {
     width: 100%;
+    max-width: 1165px;
+    left: -11px;
+    margin: auto;
+    padding-top: 17px;
+    background: #fff;
+
+    position: relative;
+  }
+
+  input.gsc-search-button.gsc-search-button-v2 {
+    border: none!important;
+    background: white!important;
+    color: $white;
+    position: relative!important;
+
+
+  }
+
+
+  .gsc-search-button {
+    &:after {
+      content: '';
+      display: block;
+      background-image: url("../img/mobile/searchnew.png") ;
+      width: 41px;
+      height: 40px;
+      position: relative;
+
+      top: -12px;
+      left: 10px
+
+    }
+  }
+
+  #gsc-iw-id1{
+    border:1px solid #ddddde;
+  }
+
+
+
+  #gsc-iw-id1,
+  .gsib_a    {
+    width: 108%;
     margin: auto;
     display: block;
     position: relative;
@@ -25,15 +73,112 @@
     font-family: 'MetaPro';
     color: $black;
     height: 82px;
+    line-height: 82px;
     border-radius: 9px;
-    border: 1px solid #ddddde;
-    padding-left: 20px;
 
+
+    padding: 0!important;
+
+
+    .gstl_50 {
+
+    }
+
+
+    input {
+      background: transparent!important;
+
+
+      padding-left: 0px!important;
+      font-size: 30px!important;
+      position: relative;
+      left: -8px;
+
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 30px;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 30px;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        font-size: 30px;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        font-size: 30px;
+      }
+
+    }
+
+    .gsib_b {
+      display: none!important;
+    }
+
+    #gsc-iw-id1 {
+      border: none!important;
+    }
+
+    .gsc-search-button {
+      border: none!important;
+      background: transparent!important;
+
+      display: block!important;
+      background-image: url(../img/mobile/searchnew.png);
+      width: 41px;
+      height: 40px;
+      position: relative;
+      right: 10px;
+      top: 28%;
+    }
+
+  }
+
+  .gsib_a {
+    width: 100%;
+
+  }
+
+  .searchNewTest{
+
+    .gsib_a {
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 25px;
+        position: relative;
+        left: -20px;
+
+        font-weight: bold;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 25px;
+        position: relative;
+        left: -20px;
+
+        font-weight: bold;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        font-size: 25px;
+        position: relative;
+        left: -20px;
+
+        font-weight: bold;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        font-size: 25px;
+        position: relative;
+        left: -20px;
+
+        font-weight: bold;
+      }
+    }
 
   }
 
   .searchBox{
     position: relative;
+
+
+
 
       &:after {
         content: '';
@@ -75,6 +220,11 @@
 
   @media (min-width:$screen-md-min) {
     display: block;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $screen-lg-min)  {
+    max-width: 1163px;
   }
 
   .newMain {
@@ -159,12 +309,14 @@
 
     line-height: 57px;
     padding: 0 10px;
-    border-radius: 6px 0 12px 0;
+    border-radius: 6px 0 4px 0;
     position: relative;
     left: 2px;
 
     @media (min-width: $screen-lg-min) {
+      border-radius: 3px 0 4px 0;
       left: 0px;
+      padding: 0px 18px;
     }
 
     //line-height: 57px;
@@ -199,8 +351,11 @@
     position: absolute;
     bottom: 15px;
 
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-md-min) {
       bottom: -44px;
+    }
+    @media (min-width: $screen-lg-min) {
+      bottom: -58px;
     }
 
     .postCalendar,
@@ -214,13 +369,31 @@
     .postCalendar{
       left: 10px;
 
+      @media (min-width: $screen-lg-min) {
+        width: 127px;
+      }
+
       span {
         position: relative;
         color: $white;
         font-size: 18px;
-        font-weight: 900;
+        font-weight: bold;
         left: 11px;
-        top: -7px;
+        top: -9px;
+      }
+
+      img {
+
+        @media (min-width: $screen-lg-min) {
+          width: 25px;
+          /* padding: 10px; */
+          height: 23px;
+          margin-left: 7px;
+          margin-top: 0px;
+          position: relative;
+          top:-5px;
+        }
+
       }
     }
 
@@ -231,22 +404,54 @@
         position: relative;
         color: $white;
         font-size: 18px;
-        font-weight: 900;
+        font-weight: bold;
         left: 10px;
         top: -7px;
+        width: 31px;
+        display: inline-block;
+      }
+
+      img {
+
+        @media (min-width: $screen-lg-min) {
+
+
+          width: 33px;
+          height: 23px;
+          margin-left: 6px;
+          margin-top: 0px;
+          position: relative;
+          top:-3px;
+        }
       }
     }
 
     .postViewData{
       left: 120px;
 
+      @media (min-width: $screen-lg-min) {
+        left: 105px;
+      }
+
       span {
         position: relative;
         color: $white;
         font-size: 18px;
-        font-weight: 900;
+        font-weight: bold;
         left: 10px;
         top: -7px;
+      }
+
+      img {
+        @media (min-width: $screen-lg-min) {
+
+          width: 25px;
+          height: 23px;
+          margin-left: 0px;
+          margin-top: 0px;
+          position: relative;
+          top:-3px;
+        }
       }
     }
   }
@@ -294,42 +499,65 @@
   }
 
   #meme {
-    max-width: 370px;
-    height: 234px;
+    max-width: 372px;
+    height: 238px;
+    border-radius: 4px;
 
     .neW {
      height: 187px;
     }
 
     .entry-title {
+
       font-size: 25px;
       font-weight: 500;
-      line-height: 32px;
-      top:80px;
+      line-height: 37px;
+      top: 57px;
     }
 
     .bottom-content {
+      bottom: -53px;
 
       img {
-        width: 20px;
-        top:0px;
-        position: relative;
+        //width: 20px;
+        //width: 18px;
+        //top:0px;
+        //position: relative;
       }
 
       span {
         font-size: 13px;
-        top:-3px;
+        top: -5px;
+        left: 7px;
       }
+
+      .postCalendar {
+
+        img {
+          margin-left: 0;
+          height: 18px;
+          width: 18px;
+          top: 1px;
+        }
+      }
+
     }
 
     .hrefTypeTwo{
       width: 18px;
       height: 18px;
-      background-size: contain;bottom: -39px;
-    span {
-      font-size: 13px;
-      top:0px;
-    }}
+      background-size: contain;
+      bottom: -45px;
+
+      border: 1px solid white;
+      border-radius: 50%;
+
+      span {
+        font-size: 13px;
+        top:0px;
+        right: 0px;
+      }
+    }
 
     .postView {
       display: none;
@@ -339,12 +567,19 @@
       left: 50px;
       position: relative;
       top: 3px;
+
+      img {
+        top:-1px;
+        height: 18px!important;;
+        width: 18px!important;
+
+      }
     }
 
     .newBgRed {
       height: 38px;
       line-height: 38px;
-      left: 1px;
+      left: 0px;
 
       a{
         font-size: 16px;
@@ -365,7 +600,5 @@
       right: 30px;
       width: 18px;
     }
-
-
   }
 }

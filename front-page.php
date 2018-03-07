@@ -55,13 +55,14 @@ get_header(); ?>
 
                 <?php // Show the selected frontpage content.
 
-                $postsPerPage = 3;
+                $postsPerPage = 4;
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => $postsPerPage
+                    'posts_per_page' => $postsPerPage,
+                    'order_by' =>  'comment_count'
                 );
 
-                $loop = new WP_Query($args);
+                $loop = new WP_Query('tag=hyip');
 
                 if ( $loop->have_posts() ) :
 

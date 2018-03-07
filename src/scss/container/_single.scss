@@ -2,7 +2,8 @@
   position: relative;
   margin: auto;
   width: 100%;
-  max-width: 1134px;
+  max-width: 1160px;
+  display: block;
 
   .forMobileAuthor {
     display: block;
@@ -31,8 +32,8 @@
   .topSideBar {
     display: block!important;
     width: 100%;
-    height: 40px;
-    border-bottom: 1px solid #d1cede;
+    height: 20px;
+    border-bottom: 0px solid #d1cede;
 
     img {
       display: inline-block;
@@ -58,6 +59,10 @@
       height: 40px;
       line-height: 40px;
       margin: 0px 10px;
+
+      @media (min-width: $screen-md-min) {
+        display: none;
+      }
     }
   }
 

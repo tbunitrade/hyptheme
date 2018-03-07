@@ -29,17 +29,15 @@ height: 55px;
     @media (min-width: $screen-lg-min) {
       width: 1270px;
       margin: auto;
+      height: 101px;
     }
 
 
     .navbar-header {
+
       @media (min-width: $screen-md-min){
         display: none;
       }
-
-
-
-
     }
   }
 
@@ -63,7 +61,7 @@ height: 55px;
     }
 
     @media (min-width: $screen-lg-min) {
-      right: -400px;
+      right: -307px;
     }
 
     li {
@@ -77,10 +75,13 @@ height: 55px;
 
     @media (min-width: $screen-md-min) {
       width: 200px;
-      height: 45px;
-      vertical-align: top;
-      margin-top: 31px;
+
+
       float: none;
+
+      height: 50px;
+
+      margin-top: 27px;
     }
 
     @media (min-width: $screen-lg-min) {
@@ -89,16 +90,23 @@ height: 55px;
 
     a {
       display: inline-block;
-      font-family: 'Roboto';
-      font-weight: 700;
+
+      font-weight: bold;
       font-size: 10px;
       line-height: 30px;
       color: $white;
 
       @media (min-width: $screen-md-min) {
-        font-size: 15px;
-        line-height: 45px;
+        font-size: 18px;
+        line-height: 50px;
+
       }
+    }
+
+    #startReg {
+      position: relative;
+      top:1px;
+      left: 1px;
     }
   }
 
@@ -109,6 +117,11 @@ height: 55px;
 
     @media (min-width: $screen-md-min) {
       display: block;
+
+    }
+
+    @media (min-width: $screen-lg-min) {
+      left: -16px;
     }
 
     .scroll-to-top {
@@ -188,7 +201,7 @@ height: 55px;
     color: $white;
     text-decoration: none;
     text-align: center;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 0.94px;
     font-size: 22px;
     margin-top: 8px;
@@ -202,7 +215,7 @@ height: 55px;
       width: 154px;
       height: 101px;
       line-height: 101px;
-      font-size: 28px;
+      font-size: 30px;
     }
 
     @media (min-width: $screen-lg-min) {
@@ -214,65 +227,68 @@ height: 55px;
       height: 16px;
 
       @media (min-width: $screen-md-min) {
-        width: 20px;
-        height: 20px;
+        width: 27px;
+        height: 26px;
         position: relative;
-        top: 2px;
+
+        top: 5px;
+        margin-left: 0px;
+        margin-right: 3px;
       }
     }
   }
 
-  .loginPanel {
-    display: none;
-    width: 145px;
-    height: 30px;
-    border-radius: 22px ;
-    background: $panellogin;
-    text-align: center;
-    color: $white;
-    margin-left: 5px;
-    margin-right: 18px;
-    vertical-align: top;
-    margin-top: 5px;
-
-    @media (min-width: $screen-md-min) {
-      display: inline-block;
-      }
-
-    li {
-       padding: 0;
-       margin: 0;
-       height: 30px;
-       width: 100%;
-       font-size: 11px;
-       list-style-type: none;
-    }
-
-    @media (min-width: $screen-md-min) {
-       width: 200px;
-       height: 45px;
-       vertical-align: top;
-       margin-top: 31px;
-    }
-
-    @media (min-width: $screen-lg-min) {
-       margin-right: 39px;
-    }
-
-    a {
-      display: inline-block;
-      font-family: 'Roboto';
-      font-weight: 700;
-      font-size: 10px;
-      line-height: 30px;
-      color: $white;
-
-        @media (min-width: $screen-md-min) {
-          font-size: 15px;
-          line-height: 45px;
-        }
-      }
-  }
+  //.loginPanel {
+  //  display: none;
+  //  width: 145px;
+  //  height: 30px;
+  //  border-radius: 22px ;
+  //  background: $panellogin;
+  //  text-align: center;
+  //  color: $white;
+  //  margin-left: 5px;
+  //  margin-right: 18px;
+  //  vertical-align: top;
+  //  margin-top: 5px;
+  //
+  //  @media (min-width: $screen-md-min) {
+  //    display: inline-block;
+  //    }
+  //
+  //  li {
+  //     padding: 0;
+  //     margin: 0;
+  //     height: 30px;
+  //     width: 100%;
+  //     font-size: 11px;
+  //     list-style-type: none;
+  //  }
+  //
+  //  @media (min-width: $screen-md-min) {
+  //     width: 200px;
+  //     height: 45px;
+  //     vertical-align: top;
+  //     margin-top: 31px;
+  //  }
+  //
+  //  @media (min-width: $screen-lg-min) {
+  //     margin-right: 39px;
+  //  }
+  //
+  //  a {
+  //    display: inline-block;
+  //    font-family: 'Roboto';
+  //    font-weight: 700;
+  //    font-size: 10px;
+  //    line-height: 30px;
+  //    color: $white;
+  //
+  //      @media (min-width: $screen-md-min) {
+  //        font-size: 15px;
+  //        line-height: 45px;
+  //      }
+  //    }
+  //}
 
   .navbar,
   .navbar-default{
@@ -282,7 +298,7 @@ height: 55px;
     background-color: transparent;
     margin: 0;
     padding: 0;
-
+    position: relative;
     padding-top: 0px;
 
     float: right;
@@ -295,6 +311,10 @@ height: 55px;
       display: inline-block;
       padding-top: 28px;
       float: none;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      left: 140px;
     }
   }
 

@@ -3,17 +3,16 @@
   display: none;
 
   @media (min-width: $screen-md-min) {
-
-
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  max-width: 340px;
-  float: right;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    max-width: 340px;
+    float: right;
   }
 
   @media (min-width: $screen-lg-min) {
     max-width: 374px;
+    margin-right: 23px;
   }
 
   .telegram {
@@ -40,8 +39,8 @@
 
       @media (min-width: $screen-lg-min) {
         font-size: 28px;
-        padding: 29px 0px 0px 16px;
-        line-height: 37px;
+        padding: 24px 0 0 14px;
+        line-height: 39px;
       }
     }
 
@@ -61,11 +60,16 @@
   .newtagCont {
     border: 1px solid #efeff3;
     border-radius: 8px;
-    padding: 10px;
-    margin: 20px 0px;
+
+    margin: 19px 0px 0px 0px;
+    padding: 26px 0px 26px 0px;
 
     .widgettitle {
       display: none;
+    }
+
+    ul {
+      padding: 0px 14px;
     }
   }
 
@@ -73,14 +77,14 @@
     display: inline-block;
     vertical-align: top;
     list-style-type: none;
-    border: 1px solid red;
-    border-radius: 10px;
+    border: 1px solid $rednew;
+    border-radius: 4px;
     padding: 8px 15px;
-    margin: 6px 5px;
+    margin: 8px 4px;
 
     a {
       text-decoration: none;
-      color: $red;
+      color: $rednew;
       font-size: 18px;
       font-weight: 500;
     }

@@ -24,7 +24,7 @@
 <header class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" itemscope itemtype="http://schema.org/WPHeader">
     <div class="headerContainer">
             <div class="logoContainer">
-                <a class="logo col-md-2" href="<?php echo home_url(); ?>">Planw<img src="<?php echo get_bloginfo('template_url')?>/dist/img/logoPlanet.png" alt=""/>rld
+                <a class="logo col-md-2" href="<?php echo home_url(); ?>">Plan<img src="<?php echo get_bloginfo('template_url')?>/dist/img/logoPlanet.png" alt=""/>world
                 </a>
                 <button class='scroll-to-top'><span>наверх</span></button>
             </div>
@@ -65,6 +65,24 @@
 </header>
 <div class="searchLine">
 
-        <?php dynamic_sidebar('searchme'); ?>
+        <?php #dynamic_sidebar('searchme'); ?>
+    <script>
+        (function() {
+            var cx = '016004673611404643148:j_sypcb0qum';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+        window.onload = function(){
+            document.getElementById('gsc-i-id1').placeholder = 'Что ищем?';
+
+        };
+    </script>
+    <div class="searchNewTest">
+        <gcse:search></gcse:search>
+    </div>
 
 </div>
