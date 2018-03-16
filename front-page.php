@@ -28,8 +28,15 @@ get_header(); ?>
             get_template_part( 'template-parts/post/content', 'none' );
         endif; ?>
 
-        <div  align="center" class="paginationNew">
-            <?php  echo paginate_links();?>
+        <div class="paginationArea">
+            <div  align="center" class="paginationNew">
+                <?php
+                $args = array(
+                    'mid_size'     => 5,
+                );
+                echo paginate_links($args);
+                ?>
+            </div>
         </div>
 
 
@@ -37,13 +44,11 @@ get_header(); ?>
     </main><!-- #main -->
 
     <aside class="sidebarNew">
-        <div class="telegram">
+        <a class="telegram" href="https://t.me/planworld" target="_blank">
             <p>подпишись на Канал<br>
             PLANWORLD.ru в<br>
                 Telegram</p>
-
-
-        </div>
+        </a>
 
         <div class="newTag">
             <?php dynamic_sidebar ('newtag'); ?>
@@ -51,7 +56,6 @@ get_header(); ?>
 
         <div class="mini">
 
-            <div class="container sunset-posts-container">
 
                 <?php // Show the selected frontpage content.
 
@@ -62,28 +66,22 @@ get_header(); ?>
                     'order_by' =>  'comment_count'
                 );
 
-                $loop = new WP_Query('tag=hyip');
+                $loop2 = new WP_Query('tag=hyip');
 
-                if ( $loop->have_posts() ) :
+                if ( $loop2->have_posts() ) :
 
                     echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
-                    while ( $loop->have_posts() ) : $loop->the_post();
+                    while ( $loop2->have_posts() ) : $loop2->the_post();
 
-                        $class = 'reveal';
-                        set_query_var('post-class' , $class );
+
+
                         get_template_part( 'template-parts/page/content', 'front-page' );
 
                     endwhile;
                     echo '</div>';
 
                 endif; ?>
-
                 <!-- append here -->
-
-
-
-
-            </div>
 
         </div>
     </aside>

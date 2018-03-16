@@ -12,7 +12,7 @@
     <title>    </title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="/favicon.ico">
 
@@ -21,7 +21,7 @@
 </head>
 
 <body id="body" <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage" >
-<header class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" itemscope itemtype="http://schema.org/WPHeader">
+<header class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation sticky" itemscope itemtype="http://schema.org/WPHeader">
     <div class="headerContainer">
             <div class="logoContainer">
                 <a class="logo col-md-2" href="<?php echo home_url(); ?>">Plan<img src="<?php echo get_bloginfo('template_url')?>/dist/img/logoPlanet.png" alt=""/>world

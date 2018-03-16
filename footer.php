@@ -1,35 +1,8 @@
 
-
 <footer id="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 
     <div class="container main-footer-container">
         <div class="row">
-            <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.js"></script>
-            </head>
-            <body>
-            <div class="container" style="">
-                    <div class="box jackLove">
-
-                        <button class="cbutton cbutton--effect-tamara">
-                            <i class="cbutton__icon ">
-
-                                    <a href="<?php get_template_directory_uri(); ?>/lyogkie_dengi" class="easyMoney"></a>
-
-                            </i>
-
-                        </button>
-                    </div>
-
-
-
-            </div><!-- /container -->
-            <script src="<?php echo get_template_directory_uri(); ?>/js/classie.js"></script>
-
-            <script>
-
-
-
-            </script>
 
 
 
@@ -85,7 +58,7 @@
     <script async src='https://www.google.com/recaptcha/api.js'></script>
 	<?php wp_footer(); ?>
 
-        <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
+
 </footer>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -98,7 +71,7 @@
     gtag('config', 'UA-88026316-3');
 </script>
 
-<!-- Yandex.Metrika counter -->
+ <!-- Yandex.Metrika counter-->
 <script type="text/javascript" >
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
@@ -126,12 +99,7 @@
     })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/22556074" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-<script>
-
-</script>
+ <!--/Yandex.Metrika counter-->
 
 
 

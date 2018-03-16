@@ -4,7 +4,7 @@ $class = get_query_var('post-class');
 ?>
 
     <article class="newArcitle" id=" post-<?php the_ID(); ?>" <?php post_class( array('hyiptheme-panel' , $class ) ); ?> >
-           <div id="meme" class="panel-image-prop" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+           <div id="meme" class="panel-image-prop" style="background-repeat: no-repeat;background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
 
                     <div class="rowTitle">
                         <a href="<?php the_permalink(); ?>" class="neWhrefTypeOne"> <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></a>

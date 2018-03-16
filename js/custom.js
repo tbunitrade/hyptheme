@@ -1,1 +1,0 @@
-/*All JS code move to SRC/JS/Custom.js and build with GULP in folder Dist/JS/dist.js*/

@@ -9,7 +9,7 @@
  */
 
 ?>
-<article id="meme" class="panel-image-prop" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+<article id="meme" class="panel-image-prop" style="background-repeat: no-repeat;background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
     <div class="panel-image neW" >
         <div class="newBgRed">
             <?php the_category(' > ', 'single'); ?>
@@ -26,10 +26,10 @@
                         </span>
                     </p>
         </div>
+        <a href="<?php the_permalink(); ?>">
+            <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+        </a>
 
-        <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-
-        <a href="<?php the_permalink(); ?>" class="hrefTypeOne">Открыть запись</a>
         <a href="<?php the_permalink(); ?>" class="hrefTypeTwo"><span>Читать далее</span></a>
 
         <div class="bottom-content">

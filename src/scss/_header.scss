@@ -61,7 +61,7 @@ height: 55px;
     }
 
     @media (min-width: $screen-lg-min) {
-      right: -307px;
+      right: -199px;
     }
 
     li {
@@ -151,7 +151,7 @@ height: 55px;
         font-size: 14px;
         line-height: 14px;
         font-weight: 700;
-        font-family: 'Roboto';
+
       }
 
       &:before {
@@ -212,7 +212,7 @@ height: 55px;
     @media (min-width: $screen-md-min) {
       margin-top: 0;
       margin-bottom: 0;
-      width: 154px;
+      width: 174px;
       height: 101px;
       line-height: 101px;
       font-size: 30px;
@@ -233,7 +233,7 @@ height: 55px;
 
         top: 5px;
         margin-left: 0px;
-        margin-right: 3px;
+        margin-right: 0px;
       }
     }
   }
@@ -298,16 +298,20 @@ height: 55px;
     background-color: transparent;
     margin: 0;
     padding: 0;
-    position: relative;
+    position: absolute;
     padding-top: 0px;
 
     float: right;
-
+    @media (min-width: $screen-sm-min) {
+      position: relative;
+    }
 
     @media (min-width: $screen-md-min) {
+      position: relative;
       height: 101px;
       line-height: 100px;
-      max-width: 645px;
+      //max-width: 645px;
+      min-width: 550px;
       display: inline-block;
       padding-top: 28px;
       float: none;
@@ -371,4 +375,38 @@ height: 55px;
     display: none!important;
   }
 }
+.navbar-fixed-top {
 
+}
+
+.fixxed {
+  position: fixed!important;
+  top:0; left:0;
+  width: 100%;
+
+  @media (min-width: $screen-sm-min) {
+    height: 87px !important;
+  }
+
+
+}
+
+.mobileSearch{
+  display: block;
+
+  @media (min-width: $screen-sm-min) {
+    display: none!important;
+  }
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: unset!important;
+}
+
+.collapse {
+  display: block!important;
+
+  @media (min-width:$screen-md-min ) {
+    display: none!important;
+  }
+}
