@@ -229,6 +229,11 @@
     border-radius: 5px;
     display: inline-block;
     margin-bottom: 22px;
+    width: 100%;
+
+    iframe{
+      width: 100%;
+    }
 
     @media (min-width: $screen-md-min) {
       padding-top: 33px;
@@ -264,7 +269,7 @@
       position: relative;
 
       p{
-        padding: 10px 10px 10px 10px!important;
+        padding: 88px 90px 34px 20px!important;
 
         @media (min-width: $screen-md-min) {
           padding: 88px 90px 34px 20px!important;
@@ -386,7 +391,8 @@
   }
 
   .myComments {
-    width: 730px;
+    width: 100%;
+    max-width: 730px;
     padding: 60px 40px 0px 40px;
     background: $white;
 
@@ -520,7 +526,7 @@
     .comment-form-author {
 
       label {
-        display:none;
+        display:inline-block;
       }
     }
 
@@ -930,3 +936,7 @@ form {
 //    margin: 10px;
 //  }
 //}
+
+.reveal {
+  z-index: 9999999999999999999999999;
+}

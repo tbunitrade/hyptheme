@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area newContainer">
 
-	<main id="main  22" class="site-main newMain" role="main">
+    <main id="main  22" class="site-main newMain" role="main">
 
         <?php // Show the selected frontpage content.
         if ( have_posts() ) :
@@ -28,8 +28,15 @@ get_header(); ?>
             get_template_part( 'template-parts/post/content', 'none' );
         endif; ?>
 
-        <div  align="center" class="paginationNew">
-            <?php  echo paginate_links();?>
+        <div class="paginationArea">
+            <div  align="center" class="paginationNew">
+                <?php
+                $args = array(
+                    'mid_size'     => 5,
+                );
+                echo paginate_links($args);
+                ?>
+            </div>
         </div>
 
 
@@ -37,13 +44,11 @@ get_header(); ?>
     </main><!-- #main -->
 
     <aside class="sidebarNew">
-        <div class="telegram">
+        <a class="telegram" href="https://t.me/planworld" target="_blank">
             <p>подпишись на Канал<br>
-            PLANWORLD.ru в<br>
+                PLANWORLD.ru в<br>
                 Telegram</p>
-
-
-        </div>
+        </a>
 
         <div class="newTag">
             <?php dynamic_sidebar ('newtag'); ?>
@@ -51,38 +56,33 @@ get_header(); ?>
 
         <div class="mini">
 
-            <div class="container sunset-posts-container">
 
-                <?php // Show the selected frontpage content.
+            <?php // Show the selected frontpage content.
 
-                $postsPerPage = 3;
-                $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => $postsPerPage
-                );
+            $postsPerPage = 7;
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => $postsPerPage,
+                'orderby'          => 'date',
+                'order'            => 'ASC',
+            );
 
-                $loop = new WP_Query($args);
+            $loop2 = new WP_Query( $args);
 
-                if ( $loop->have_posts() ) :
+            if ( $loop2->have_posts() ) :
 
-                    echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
-                    while ( $loop->have_posts() ) : $loop->the_post();
-
-                        $class = 'reveal';
-                        set_query_var('post-class' , $class );
-                        get_template_part( 'template-parts/page/content', 'front-page' );
-
-                    endwhile;
-                    echo '</div>';
-
-                endif; ?>
-
-                <!-- append here -->
+//                echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                while ( $loop2->have_posts() ) : $loop2->the_post();
 
 
 
+                    get_template_part( 'template-parts/page/content', 'front-page' );
 
-            </div>
+                endwhile;
+//                echo '</div>';
+
+            endif; ?>
+            <!-- append here -->
 
         </div>
     </aside>
@@ -90,9 +90,7 @@ get_header(); ?>
 <div class="clear"></div>
 
 <div id="primary222  " class="content-area content-areaNew">
-    <div class="topSideBar">
-        <img src="<?php echo get_template_directory_uri (); ?>/dist/img/mobile/back.png"><span>Назад</span>
-    </div>
+
     <main id="main pageajax" class="site-main" role="main">
 
         <div class="container sunset-posts-container">
@@ -109,7 +107,7 @@ get_header(); ?>
 
             if ( $loop->have_posts() ) :
 
-                echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                //echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
                 while ( $loop->have_posts() ) : $loop->the_post();
 
                     $class = 'reveal';
@@ -117,7 +115,7 @@ get_header(); ?>
                     get_template_part( 'template-parts/postforajax', get_post_format() );
 
                 endwhile;
-                echo '</div>';
+             //   echo '</div>';
 
             endif; ?>
 

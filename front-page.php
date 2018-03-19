@@ -66,11 +66,11 @@ get_header(); ?>
                     'order_by' =>  'comment_count'
                 );
 
-                $loop2 = new WP_Query('tag=hyip');
+                $loop2 = new WP_Query(' $args');
 
                 if ( $loop2->have_posts() ) :
 
-                    echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+//                    echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
                     while ( $loop2->have_posts() ) : $loop2->the_post();
 
 
@@ -78,7 +78,7 @@ get_header(); ?>
                         get_template_part( 'template-parts/page/content', 'front-page' );
 
                     endwhile;
-                    echo '</div>';
+//                    echo '</div>';
 
                 endif; ?>
                 <!-- append here -->

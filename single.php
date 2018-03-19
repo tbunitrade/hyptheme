@@ -1,18 +1,18 @@
 <?php get_header(); ?>
 
     <div id="primary" class="content-area singlePost" itemscope itemtype="http://schema.org/Article">
-        <div class="topSideBar" style="display: none">
-
-
-            <?php
-            if ( ! empty ( $_SERVER['HTTP_REFERER'] ) )
-            {
-                ?>
-                <a href="<?php echo esc_url( $_SERVER['HTTP_REFERER'] ) ?>">  <img src="<?php echo get_template_directory_uri (); ?>/dist/img/mobile/back.png"><span>Назад</span></a>
-                <?php
-            }
-            ?>
-        </div>
+<!--        <div class="topSideBar" style="display: none">-->
+<!---->
+<!---->
+<!--            --><?php
+//            if ( ! empty ( $_SERVER['HTTP_REFERER'] ) )
+//            {
+//                ?>
+<!--                <a href="--><?php //echo esc_url( $_SERVER['HTTP_REFERER'] ) ?><!--">  <img src="--><?php //echo get_template_directory_uri (); ?><!--/dist/img/mobile/back.png"><span>Назад</span></a>-->
+<!--                --><?php
+//            }
+//            ?>
+<!--        </div>-->
         <main id="main" class="site-main" role="main">
 
 

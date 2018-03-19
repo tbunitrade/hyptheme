@@ -26,7 +26,7 @@ if ( post_password_required() ){
     $fields =  array(
 
         'author' =>
-            '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) .
+            '<p class="comment-form-author"><label for="author">' . __( 'Your Name', 'domainreference' ) .
             ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
             '<input id="author" placeholder="Ваше имя " name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
             '" size="30"' . $aria_req . ' /></p>'
@@ -34,7 +34,7 @@ if ( post_password_required() ){
 
     );
 
-    comment_form($fields); ?>
+    echo comment_form($fields); ?>
 
     <?php if ( have_comments() ) : ?>
 

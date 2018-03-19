@@ -204,7 +204,7 @@ height: 55px;
     font-weight: bold;
     letter-spacing: 0.94px;
     font-size: 22px;
-    margin-top: 8px;
+    margin-top: 11px;
     margin-bottom: 17px;
     padding: 0;
     position: relative;
@@ -300,6 +300,7 @@ height: 55px;
     padding: 0;
     position: absolute;
     padding-top: 0px;
+    height: 55px;
 
     float: right;
     @media (min-width: $screen-sm-min) {
