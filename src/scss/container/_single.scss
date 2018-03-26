@@ -206,6 +206,8 @@
     font-weight:900;
     text-align: left;
     text-transform: uppercase;
+    color: black;
+
 
     @media (min-width: 550px) {
       font-size: 45.5px;
@@ -248,7 +250,13 @@
 
     border: 1px solid #efeff3 ;
 
+    h2{
+      padding: 0px 18px;
+    }
 
+    table {
+      padding: 0px 18px;
+    }
 
     p {
       font-family: 'MetaPro';
@@ -258,9 +266,12 @@
       padding: 11px 26px 21px 20px;
       margin: 0 0 0px;
       text-align: left;
+      color: black;
 
       strong {
         font-weight: bold;
+        color: black;
+
       }
     }
 
@@ -269,6 +280,8 @@
       position: relative;
 
       p{
+        color: black;
+
         padding: 88px 90px 34px 20px!important;
 
         @media (min-width: $screen-md-min) {
@@ -309,7 +322,7 @@
 
     ol,ul {
      font-weight: 700;
-      padding: 5px 0 5px 18px;
+      padding: 5px 18px 5px 18px;
     }
   }
 
@@ -460,6 +473,7 @@
 
     .comment-author {
       display: inline-block;
+      padding-top: 16px;
      /* float: left;**/
 
       img{

@@ -59,19 +59,29 @@ get_header(); ?>
 
                 <?php // Show the selected frontpage content.
 
-                $postsPerPage = 4;
+
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => $postsPerPage,
-                    'order_by' =>  'comment_count'
+                    'post_status' => 'publish',
+                    'orderby'             => 'comment_count', // date is primary
+                    'order'               => 'DESC', // not required because it's the default value
+
+                    // Using the date_query to filter posts from last week
+                    'date_query' => array(
+                        array(
+                            'after'  => '14 days ago'
+                        ),
+                    ),
+                    'post_per_page' => 13,
                 );
 
-                $loop2 = new WP_Query(' $args');
 
-                if ( $loop2->have_posts() ) :
+                $loop332 = new WP_Query( $args);
+
+                if ( $loop332->have_posts() ) :
 
 //                    echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
-                    while ( $loop2->have_posts() ) : $loop2->the_post();
+                    while ( $loop332->have_posts() ) : $loop332->the_post();
 
 
 
@@ -96,7 +106,7 @@ get_header(); ?>
 
             <?php // Show the selected frontpage content.
 
-            $postsPerPage = 3;
+            $postsPerPage = 5;
             $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => $postsPerPage
@@ -106,7 +116,7 @@ get_header(); ?>
 
             if ( $loop->have_posts() ) :
 
-                echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                echo '<div class="page-limit" data-page="'. site_url() .'/' . sunset_check_paged() . ' ">';
                 while ( $loop->have_posts() ) : $loop->the_post();
 
                     $class = 'reveal';

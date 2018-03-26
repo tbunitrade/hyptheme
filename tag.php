@@ -56,20 +56,28 @@ get_header(); ?>
         <div class="mini">
 
 
+
+
             <?php // Show the selected frontpage content.
 
-            $postsPerPage = 4;
+              $tag = single_tag_title('', false);
+
+
+
+
+
             $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => $postsPerPage,
-                'order_by' =>  'comment_count'
+                'post_status'      => 'publish',
+                'tag'  =>  $tag,
+                'orderby'=> 'comment_count',
+                'posts_per_page'   => 13
             );
 
             $loop2 = new WP_Query( $args);
 
             if ( $loop2->have_posts() ) :
 
-//                echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                echo '<div class="page-limit" data-page="'. site_url() .'/' . sunset_check_paged() . ' ">';
                 while ( $loop2->have_posts() ) : $loop2->the_post();
 
 
@@ -77,9 +85,12 @@ get_header(); ?>
                     get_template_part( 'template-parts/page/content', 'front-page' );
 
                 endwhile;
-//                echo '</div>';
+               echo '</div>';
 
-            endif; ?>
+            endif;
+
+
+            ?>
             <!-- append here -->
 
         </div>
@@ -105,7 +116,7 @@ get_header(); ?>
 
             if ( $loop->have_posts() ) :
 
-                echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                echo '<div class="page-limit" data-page="'. site_url() .'/' . sunset_check_paged() . ' ">';
                 while ( $loop->have_posts() ) : $loop->the_post();
 
                     $class = 'reveal';

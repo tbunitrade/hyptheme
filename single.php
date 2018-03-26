@@ -30,7 +30,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/dist/img/mobile/authoricon.png">
                                 <p itemprop="author">
                                     <span> Автор :</span>
-                                    <span>
+                                    <span class="author">
                                 <?php echo the_author_meta('display_name', $post->post_author ); ?>
 
                             </span>
@@ -40,7 +40,7 @@
                             <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
                             <div class="bottom-content">
-                                <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.png"><span><?php echo get_the_date() ;?></span></p>
+                                <p class="postCalendar"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/calendar.png"><span class="updated"><?php echo get_the_date() ;?></span></p>
                                 <p class="postView"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/counters.png"><span><?php echo the_views(); ?></span></p>
                                 <p class="postViewData"><img src="<?php echo get_template_directory_uri(); ?>/dist/img/data.png"><span><?php comments_number('0', '1', '%'); ?> </span></p>
 
@@ -112,24 +112,32 @@
 
                     <?php // Show the selected frontpage content.
 
-                    $postsPerPage = 3;
+                    $tag = single_tag_title('', false);
+
+
+
+
+
                     $args = array(
-                        'post_type' => 'post',
-                        'posts_per_page' => $postsPerPage
+                        'post_status'      => 'publish',
+                        'tag'  =>  $tag,
+                        'orderby'     => 'date',
+                        'order'       => 'DESC',
+                        'posts_per_page'   => 5
                     );
 
                     $loop3 = new WP_Query($args);
 
                     if ( $loop3->have_posts() ) :
 
-                        echo '<div class="page-limit" data-page="'. site_url() .'/lenta/' . sunset_check_paged() . ' ">';
+                        //echo '<div class="page-limit" data-page="'. site_url() .'/' . sunset_check_paged() . ' ">';
                         while ( $loop3->have_posts() ) : $loop3->the_post();
 
 
                             get_template_part( 'template-parts/page/content', 'front-page' );
 
                         endwhile;
-                        echo '</div>';
+                       // echo '</div>';
 
                     endif; ?>
 

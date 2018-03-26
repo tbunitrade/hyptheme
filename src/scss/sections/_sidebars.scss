@@ -110,3 +110,25 @@
     }
   }
 }
+
+.tagcloud {
+  padding: 0px 14px;
+
+  a{
+    display: inline-block;
+    vertical-align: top;
+    list-style-type: none;
+    border: 1px solid $rednew;
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin: 8px 4px;
+    text-decoration: none;
+    color: $rednew;
+    font-size: 18px!important;
+    font-weight: 500;
+  }
+}
+
+.widgettitle {
+  display: none;
+}
